@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'primary': '#130801', 'tertiary-fixed-dim': '#e9c349', 'error-container': '#ffdad6', 'surface-tint': '#6f5a4b', 'surface': '#FAE9D1', 'on-surface': '#221a0c', 'on-error-container': '#93000a', 'primary-fixed-dim': '#dcc1af', 'on-secondary-fixed-variant': '#7d2d00', 'on-surface-variant': '#4e453f', 'outline-variant': '#d2c4bb', 'on-tertiary-container': '#4f3e00', 'primary-container': '#2d1e12', 'on-secondary-container': '#6a2500', 'on-primary-container': '#9b8473', 'surface-container-highest': '#f1e0c8', 'inverse-surface': '#382f1f', 'on-background': '#221a0c', 'background': '#FAE9D1', 'on-secondary': '#ffffff', 'inverse-primary': '#dcc1af', 'outline': '#80756e', 'on-error': '#ffffff', 'tertiary-fixed': '#ffe088', 'surface-container-high': '#f7e6ce', 'surface-dim': '#e8d8c0', 'tertiary': '#735c00', 'on-secondary-fixed': '#360f00', 'secondary-container': '#fd844c', 'primary-fixed': '#f9ddca', 'on-primary-fixed-variant': '#564335', 'on-tertiary-fixed-variant': '#574500', 'inverse-on-surface': '#ffeed8', 'error': '#ba1a1a', 'on-tertiary': '#ffffff', 'tertiary-container': '#cca730', 'secondary': '#a14009', 'surface-container-low': '#fff2e1', 'secondary-fixed-dim': '#ffb596', 'on-primary': '#ffffff', 'surface-container': '#fdecd3', 'on-primary-fixed': '#27180d', 'surface-container-lowest': '#ffffff', 'surface-bright': '#fff8f3', 'on-tertiary-fixed': '#241a00', 'secondary-fixed': '#ffdbcd', 'surface-variant': '#f1e0c8' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'margin-mobile': '1.25rem', 'space-lg': '1.5rem', 'margin': '3rem', 'space-xl': '2.5rem', 'space-sm': '0.5rem', 'space-md': '1rem', 'gutter': '1.5rem', 'gutter-mobile': '1rem', 'space-xs': '0.25rem' }, 'fontFamily': { 'headline-sm': ['Playfair Display'], 'headline-lg-mobile': ['Playfair Display'], 'title-md': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-md': ['Playfair Display'], 'headline-lg': ['Playfair Display'], 'body-sm': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'title-lg': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'headline-display-mobile': ['Playfair Display'], 'body-lg': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'headline-display': ['Playfair Display'] }, 'fontSize': { 'headline-sm': ['22px', { 'lineHeight': '28px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'headline-lg-mobile': ['28px', { 'lineHeight': '36px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'title-md': ['16px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'label-lg': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0.02em', 'fontWeight': '600' }], 'headline-md': ['28px', { 'lineHeight': '36px', 'letterSpacing': '0em', 'fontWeight': '500' }], 'headline-lg': ['40px', { 'lineHeight': '48px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'body-sm': ['13px', { 'lineHeight': '20px', 'letterSpacing': '0.01em', 'fontWeight': '400' }], 'label-md': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.04em', 'fontWeight': '600' }], 'title-lg': ['20px', { 'lineHeight': '28px', 'letterSpacing': '-0.01em', 'fontWeight': '700' }], 'body-md': ['15px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'headline-display-mobile': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'body-lg': ['18px', { 'lineHeight': '30px', 'letterSpacing': '0.01em', 'fontWeight': '400' }], 'label-sm': ['11px', { 'lineHeight': '14px', 'letterSpacing': '0.08em', 'fontWeight': '700' }], 'headline-display': ['56px', { 'lineHeight': '64px', 'letterSpacing': '-0.02em', 'fontWeight': '600' }] } } } };</script>
+</head><body class="bg-[#FAE9D1] font-body-md text-body-md text-on-surface antialiased">
+<!-- TOP NAVBAR HEADER -->
+<header class="sticky top-0 z-50 w-full bg-[#FAE9D1]/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter h-20 flex items-center justify-between"><!-- Brand Logo (Left) -->
+<a class="flex items-center gap-3 group shrink-0" href="#">
+  <img alt="NUSANTARA Emblem" class="w-10 h-10 object-contain rounded-full border border-primary/10 shadow-sm transition-transform group-hover:rotate-6" src="https://lh3.googleusercontent.com/aida/AEtjO1UXfilAk3ZwLj43hJH-Ju2lpMH-8NAtjnYdHny2h05hCI93_K7CwZ4Q4PVCaPBRmnjpDIzpBm6-GOA67KVtQw6b3AlD7mIKaaTOMF3VLIjFf1DecDrlqvENDsAAfvJ87B4B8-OzyoRJTasX0uJaf_OK1GNGmsJjamX7vwRSxARX0pQFXULoGUsakfyi3PfqrRtTo15Wl36gNVx0UQWlqgsbxAEDscxT2-FCgMOYNffZC03_52nmhAytBvo">
+  <div class="flex flex-col">
+    <span class="font-headline-md text-xl lg:text-2xl tracking-wider text-primary font-bold">NUSANTARA</span>
+    <span class="font-label-sm text-[10px] tracking-widest uppercase text-on-surface-variant -mt-1 font-medium">Jejak Budaya Indonesia</span>
+  </div>
+</a>
+
+<!-- Navigation Menu Centered (Styled with italic serif typography like IMAGE_3) -->
+<nav class="flex items-center justify-center gap-8 mx-auto">
+  <a class="font-headline-md italic text-xl text-secondary hover:text-primary transition-colors font-serif relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary" href="#">Home</a>
+  <a class="font-headline-md italic text-xl text-primary/80 hover:text-secondary transition-colors font-serif py-1" href="#peta-interaktif">Peta</a>
+  <a class="font-headline-md italic text-xl text-primary/80 hover:text-secondary transition-colors font-serif py-1" href="#jelajahi-budaya">Budaya</a>
+</nav>
+
+<!-- Search Pill (Right side matching IMAGE_2) -->
+<div class="hidden sm:flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full bg-white/90 border border-primary/10 shadow-sm text-on-surface-variant hover:border-secondary/40 transition-all cursor-pointer shrink-0">
+  <span class="material-symbols-outlined text-[18px] text-secondary">search</span>
+  <span class="font-body-sm text-xs text-on-surface-variant/90 pr-2 select-none">Cari tradisi, tari, kuliner...</span>
+  <span class="font-label-sm text-[11px] font-bold px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant/80 border border-outline-variant/30 select-none">⌘K</span>
+</div></div>
+</header>
+<main class="w-full bg-[#FAE9D1] min-h-screen"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- HERO SECTION WITH EXPEDITION MAP -->
+<section class="relative w-full overflow-hidden bg-surface-container-low/60 pb-space-xl pt-space-md lg:pb-32 lg:pt-space-lg">
+<!-- Ambient Heritage Glow Background -->
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[840px] h-[520px] bg-gradient-to-b from-secondary-container/15 via-tertiary-fixed-dim/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 right-10 w-96 h-96 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter relative z-10">
+<!-- Title & Headline Block -->
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-space-md mb-space-lg">
+<!-- Large Headline in Serif -->
+<h1 class="font-headline-display text-headline-display-mobile md:text-headline-display text-primary leading-tight tracking-tight">
+          Jelajahi Indonesia,<br class="hidden sm:inline">
+<span class="italic font-normal font-headline-display text-secondary">kenali cerita</span> di balik budayanya.
+        </h1>
+<!-- Supporting Text -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Temukan kekayaan budaya dari 38 provinsi Indonesia melalui perjalanan interaktif yang penuh cerita.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-xs">
+<a class="group inline-flex items-center gap-space-sm px-7 py-3.5 rounded-full bg-primary-container text-surface hover:bg-secondary transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5" data-path="jelajahi-peta" href="#peta-interaktif">
+<span class="font-label-lg text-label-lg tracking-wide text-surface">Mulai Menjelajahi</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed group-hover:translate-x-1 group-hover:rotate-45 transition-transform">explore</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-6 py-3.5 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container-high transition-all shadow-sm hover:shadow-md" href="#jelajahi-budaya">
+<span class="material-symbols-outlined text-[20px] text-secondary">auto_stories</span>
+<span class="font-label-lg text-label-lg font-semibold">Arsip Warisan Budaya</span>
+</a>
+</div>
+</div>
+<!-- Interactive Vector Archipelago Map Canvas -->
+<div class="relative mt-space-md w-full bg-surface-container-lowest rounded-3xl p-space-md lg:p-space-lg shadow-xl shadow-primary/5" id="peta-interaktif">
+<!-- Floating Micro Cultural Badges -->
+<div class="absolute top-4 left-6 sm:top-8 sm:left-10 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/90 shadow-sm backdrop-blur-md animate-pulse">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Tari Saman (Aceh)</span>
+</div>
+<div class="hidden sm:flex absolute bottom-8 left-16 z-20 items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/90 shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px] text-tertiary">music_note</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Sasando (NTT)</span>
+</div>
+<div class="hidden md:flex absolute top-8 right-24 z-20 items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/90 shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px] text-secondary">sailing</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Phinisi (Sulsel)</span>
+</div>
+<!-- REAL INDONESIA SVG MAP -->
+<div id="indonesia-map" class="relative w-full aspect-[1185/452] flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-surface-container-low/40 to-surface-container/60">
+  <div id="map-loading" class="absolute inset-0 flex items-center justify-center text-sm text-on-surface-variant z-10">
+    Memuat peta Indonesia...
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- STATISTICS ROW -->
+<section class="relative max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter -mt-8 sm:-mt-12 z-20 w-full mb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm sm:gap-space-md bg-surface-container-lowest p-space-md lg:p-space-lg rounded-2xl shadow-xl shadow-primary/5">
+<!-- Stat 1 -->
+<div class="flex items-start gap-space-sm p-space-xs sm:p-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary leading-tight font-bold">38</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Provinsi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dari Sabang sampai Merauke</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="flex items-start gap-space-sm p-space-xs sm:p-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]">theater_comedy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary leading-tight font-bold">Ratusan</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Budaya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tari, Musik, Adat, Kuliner</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="flex items-start gap-space-sm p-space-xs sm:p-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary leading-tight font-bold">7</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Wilayah</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gugusan Kepulauan Nusantara</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: JELAJAHI BUDAYA (CULTURAL CARDS FROM IMAGE_2) -->
+<section class="w-full max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter pb-24" id="jelajahi-budaya">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="font-headline-lg text-3xl sm:text-4xl text-primary font-serif font-bold tracking-tight mb-2">Jelajahi Budaya</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl text-sm sm:text-base">
+        Arsip terkurasi meliputi ritus sakral, seni pertunjukan, ornamen ukiran, tenun wastra, dan arsitektur vernakular.
+      </p>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8E7C8]/80 border border-[#E9D2A9] text-xs font-semibold text-secondary self-start md:self-auto">
+<span class="material-symbols-outlined text-[16px]">bookmark_heart</span>
+<span class="">Menampilkan 6 Warisan Pilihan</span>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none no-scrollbar">
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-primary-container text-surface text-xs font-semibold shadow-sm transition-all" data-filter="all">Semua Budaya (28)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="seni">Seni &amp; Tari (6)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="musik">Musik &amp; Instrumen (4)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="arsitektur">Rumah Adat (5)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="wastra">Pakaian &amp; Wastra (5)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="kuliner">Kuliner Pusaka (4)</button>
+<button class="filter-pill shrink-0 px-4 py-2 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface-variant text-xs font-medium transition-all" data-filter="ritus">Ritus &amp; Tradisi (4)</button>
+</div>
+<!-- 6 Cultural Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Tari Tor-Tor -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="seni">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Tari Tor-Tor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdG0Wq1cXbsZgt7NpU8vP0KzOjYmyuv13Qld_KLCn_qCVKLsvRxwvavTq6UPJ4Q2xhlhTl-kKanq87xx6H74fBn8VpRdFJhhlUTKcO0OhoBr6kyNr-DLpCydHBRGFCZ_io_ZCAzWf1iFyGY5jZ7W8bDmSEO9BNTE0kljve5ZK15w3_MOF4jyVm1_rKkOFIx4BNY1fQftzsiuVCr68AG9NVmZ7xC7-izt455UETG0bIfGkch218oiUw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Seni &amp; Tari</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#A14009] text-white">Intangible Heritage</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<div class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">music_note</span>
+<span class="">Termasuk sampel audio Gondang</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Batak Toba &amp; Samosir • Upacara Horja</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Tari Tor-Tor</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Tarian seremonial sakral suku Batak yang diiringi tabuhan Gondang Sabangunan. Gerakan tangan menghormati leluhur dan permohonan berkah dalam...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #01 • 6 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2: Kain Ulos Sadum & Mangiring -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="wastra">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Kain Ulos Sadum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7KGLRgCjdoYB8zQYV3Mp3ZBgJhDgQu_POZIBMKlS3J97XeOzZ0P1_m7LfaoS0kGzlltVXiNkkJKnRU2nEkHJQ-n1MiS10HFwN0Ai_FKIlUqOTnwxII_tEu09lGKLuIRCU3a65rX1uXGSFoMz8qJkK3jPFylXMOcnRjZv9IvaHwCEixf24VCwmCSbO_uLWIsF93zI2gRVwoaJU12mwdnFeHQ9qmBNm2Nw-qSsXseqrqiNsYCcAUcm6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Pakaian &amp; Wastra</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#CCA730] text-primary">UNESCO WDTB</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Tarutung &amp; Balige, Tapanuli • Simbol Kasih</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Kain Ulos Sadum &amp; Mangiring</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Wastra sakral simbol restu, ikatan kasih (holong), dan perlindungan spiritual dalam setiap daur hidup Batak, dari kelahiran, pernikahan, hingga persemayaman...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #02 • 8 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3: Rumah Bolon (Jabu Bolon) -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="arsitektur">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Rumah Bolon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzJWt617CEB9uLkxbpwivLSCzsyqQ9BY56XrR9wfsqw9XbgbzJAjy9LdojxtH-B_MH2l2Qp5hpRn0D5bFH4_JjR11gT7qGciEdSn241x3vKo8dOKJ19AcYBpEsFavIqPwVCtU9vTT0S2JKEbI1ukIT32p_lo_DRlRWEwZ5CjnR9heAw7A6-al_NxBfHGkHoiX7yroAZOeJUd35i-8O5YGN6VGPU6ioMxyn9DX3T02ZpB-rrSZ8fNfr">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Arsitektur Adat</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#7D2D00] text-white">Tahan Gempa</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Huta Batak, Danau Toba • Vernakular Kayu</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Rumah Bolon (Jabu Bolon)</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Mahakarya arsitektur vernakular dengan atap melengkung menyerupai perahu, sarat filosofi kosmologi tiga alam Batak (Banua Ginjang, Banua...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #03 • 10 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 4: Gondang Sabangunan -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="musik">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Gondang Sabangunan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbEqWqPLzeJxNhTQ9WLmTrjWeE0YaZMSAE310PcJ09yXtHZnMwvXGg2D4xfGxuM6tjEukFYWLgyXFhHEqYStbb1GBkItFtAtER6ErAxi4HKelSeok8hQJ_vEK81Fe3D16CfroE-wHVtWdwyuc0MefRv0QNjaPrJ5X3pmWa0BjuQ3tb4cueBuZ_9DuGeaTk8X8av0XnVszaoNKeTa4_P163wnFlNl7TROqd-gHOrlup_fZMhxfd_8m">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Musik Tradisional</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#A14009] text-white">Ritual Sakral</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<div class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">music_note</span>
+<span class="">Termasuk sampel audio Sarune &amp; Taganing</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Dataran Tinggi Toba • Ansambel 5 Instrumen</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Gondang Sabangunan</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Ansambel ritmik sakral pengiring upacara adat yang menghubungkan manusia dengan ritus spiritual semesta melalui paduan Taganing, Ogung, dan tiupan...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #04 • 5 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 5: Arsik Ikan Mas & Bumbu Andaliman -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="kuliner">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Arsik Ikan Mas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCskLgYQyL7lkatZJPi6SMODyDq0T0Hjq8WpbBknlFVs9B9AuvFfbl4PUVqsYXd5FYpJf1wdTE6TiOfvhkkLlk7dRAGsfmgvxQysppUWwKViisFJSxqb-_Fg0jZkv_KxJwlc-KvASOssKzuMKgTsxerH2Ec52KFKkcagH1GLjXGv-QknFTBJVKD2FKC94kQBE55oD58n_bXKmKOtufZg84MHq83iepqwszWkU305ne07iklEmdzepVG">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Kuliner Pusaka</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#735C00] text-white">Gastronomi Adat</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Sumatera Utara Meluas • Rempah Endemik</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Arsik Ikan Mas &amp; Bumbu Andaliman</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Kuliner ritual persembahan cinta kasih keluarga yang terkenal dengan sensasi getar getir merica batak (andaliman), dipadu dengan asam gelugur dan bunga...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #05 • 7 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 6: Hombo Batu (Lompat Batu Nias) -->
+<div class="cultural-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-outline-variant/30 group" data-cat="ritus">
+<div class="relative w-full h-52 overflow-hidden">
+<img alt="Hombo Batu Nias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNWujtasfUcKhv5uKrHkDtPBMhdnCPABx6yvncj2jJ1y5PcqEEV6O6P9EuxRrMnZJFW4csCxzsktVmAobp76s2-sNwvhkmeiOLHeRqeVSnTiph_BUCGY67boOgkwefzH-_s6o0tAJ5fpfHkVNjEWsVgf5NL-libESB1NsoE0Ch-9_4qTRmqKOysgSpBiJPbZX3wG61y3aYHpFhWjdFIj-YSKoVnGQn3mARt63qe3K3zFCvZBTXvsOe">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/90 text-primary backdrop-blur-sm">Ritus &amp; Tradisi</span>
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#A14009] text-white">Megalitikum</span>
+</div>
+<button class="bookmark-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-outline hover:text-secondary flex items-center justify-center backdrop-blur-sm shadow transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[12px] text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span class="">Desa Bawomataluo, Nias Selatan • Inisiasi Satria</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-primary mb-2 font-serif group-hover:text-secondary transition-colors">Hombo Batu (Lompat Batu Nias)</h3>
+<p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+            Ritus inisiasi kedewasaan dan keberanian prajurit muda suku Nias melompati tumpukan batu monolit setinggi 2 meter tanpa menyentuh puncaknya sebagai bukti...
+          </p>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline">Arsip #06 • 9 Menit Baca</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-xs font-bold text-primary group-hover:text-secondary transition-colors" href="#">
+<span class="">Pelajari Budaya Ini</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</div></main>
+<footer class="w-full bg-primary-container text-surface-variant pt-space-xl pb-space-lg">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-lg pb-space-xl">
+<div class="lg:col-span-5 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<span class="font-headline-md text-headline-md text-surface tracking-tight">NUSANTARA</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary-fixed italic font-normal max-w-md">Jelajahi Indonesia, kenali cerita di balik budayanya.</p>
+<p class="font-body-md text-body-md text-outline-variant max-w-md leading-relaxed">Platform kurasi ekspedisi kebudayaan digital yang mengarsipkan warisan takbenda, arsitektur vernakular, ritual adat, dan gastronomi luhur dari Sabang sampai Merauke.</p>
+<div class="flex items-center gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-tertiary-fixed">verified</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Inisiatif Pelestarian Budaya</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">UNESCO ICH Network &amp; Ditjen Kebudayaan RI</span>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-space-sm">
+<h3 class="font-title-md text-title-md text-surface font-bold tracking-wider uppercase">38 Provinsi Jelajah Budaya</h3>
+<div class="grid grid-cols-2 gap-x-space-md gap-y-1 font-body-sm text-body-sm text-outline-variant">
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Aceh</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Sumatera Utara</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Sumatera Barat</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Riau &amp; Kepri</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Jawa Barat</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">DI Yogyakarta</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Jawa Timur</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Bali &amp; Nusa Tenggara</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Kalimantan Timur</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Sulawesi Selatan</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Maluku Utara</a>
+<a class="hover:text-surface transition-colors" data-path="dossier-provinsi" href="#">Papua Pegunungan</a>
+</div>
+<div class="pt-space-xs">
+<a class="font-label-md text-label-md text-secondary-container hover:text-surface inline-flex items-center gap-1 transition-colors" data-path="jelajahi-peta" href="#">
+<span class="">Lihat Semua 38 Wilayah Adat</span>
+<span class="material-symbols-outlined text-[16px]">east</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3 space-y-space-md">
+<h3 class="font-title-md text-title-md text-surface font-bold tracking-wider uppercase">Koleksi Tematik</h3>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-outline-variant">
+<li class=""><a class="hover:text-surface transition-colors flex items-center justify-between" data-path="arsip-budaya" href="#"><span class="">Wastra &amp; Tenun Tradisional</span><span class="font-label-sm text-label-sm text-tertiary-fixed">84 Objek</span></a></li>
+<li class=""><a class="hover:text-surface transition-colors flex items-center justify-between" data-path="arsip-budaya" href="#"><span class="">Seni Pertunjukan &amp; Tari Klasik</span><span class="font-label-sm text-label-sm text-tertiary-fixed">112 Objek</span></a></li>
+<li class=""><a class="hover:text-surface transition-colors flex items-center justify-between" data-path="arsip-budaya" href="#"><span class="">Arsitektur Rumah Adat</span><span class="font-label-sm text-label-sm text-tertiary-fixed">65 Objek</span></a></li>
+<li class=""><a class="hover:text-surface transition-colors flex items-center justify-between" data-path="arsip-budaya" href="#"><span class="">Gastronomi &amp; Rempah Nusantara</span><span class="font-label-sm text-label-sm text-tertiary-fixed">98 Objek</span></a></li>
+<li class=""><a class="hover:text-surface transition-colors flex items-center justify-between" data-path="arsip-budaya" href="#"><span class="">Ritual &amp; Manuskrip Kuno</span><span class="font-label-sm text-label-sm text-tertiary-fixed">43 Objek</span></a></li>
+</ul>
+<div class="p-space-md rounded-xl bg-primary/40">
+<p class="font-label-sm text-label-sm text-primary-fixed-dim leading-snug">Didukung oleh komunitas antropologi, pegiat tradisi lokal, dan kurator museum nusantara independen.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-outline-variant font-label-md text-label-md">
+<p class="">© 2025 NUSANTARA — Jejak Budaya Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
+<div class="flex items-center gap-space-md">
+<a class="hover:text-surface transition-colors" data-path="tentang-nusantara" href="#">Pedoman Etika Budaya</a>
+<a class="hover:text-surface transition-colors" data-path="tentang-nusantara" href="#">Akses Keterbukaan Arsip</a>
+<a class="hover:text-surface transition-colors" data-path="tentang-nusantara" href="#">Kontribusi Riset</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body></html>

@@ -1,0 +1,117 @@
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAE9D1;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#indonesia-map {
+  position: relative;
+}
+
+#indonesia-map svg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  overflow: visible;
+}
+
+#indonesia-map svg .dxm-area {
+  fill: #8B5E3C !important;
+  stroke: #FAE9D1 !important;
+  stroke-width: 1.15;
+  transition: fill 180ms ease, opacity 180ms ease, filter 180ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+#indonesia-map svg .dxm-area:hover,
+#indonesia-map svg .dxm-area:focus {
+  fill: #A14009 !important;
+  filter: drop-shadow(0 4px 8px rgba(45,30,18,.22));
+}
+
+#indonesia-map svg .dxm-area.is-selected {
+  fill: #735C00 !important;
+  filter: drop-shadow(0 4px 8px rgba(45,30,18,.25));
+}
+
+#indonesia-map svg .dxm-area::selection {
+  outline: none;
+}
+
+.province-tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 20px 18px;
+  box-shadow: 0 12px 32px rgba(19, 8, 1, 0.18), 0 4px 12px rgba(19, 8, 1, 0.1);
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  transition: opacity 150ms ease-out, transform 150ms ease-out;
+  will-change: transform, opacity;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.province-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #ffffff;
+  filter: drop-shadow(0 4px 6px rgba(19, 8, 1, 0.08));
+}
+
+.province-tooltip.visible {
+  opacity: 1;
+  transform: translate(-50%, calc(-100% - 16px));
+}
+
+.province-tooltip .tt-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #130801;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+
+.province-tooltip .tt-count {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4e453f;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
