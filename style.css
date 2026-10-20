@@ -115,3 +115,71 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Detail Page Editorial Touches */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#detail-content {
+  will-change: opacity, transform;
+}
+
+#hero-image {
+  transition: transform 1s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.max-w-\[1320px\]:hover #hero-image {
+  transform: scale(1.05);
+}
+
+.bg-surface-container-low {
+  background-color: #fff2e1;
+}
+
+.bg-surface-container-high {
+  background-color: #f7e6ce;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInScale 0.8s cubic-bezier(0.2, 0, 0.2, 1) forwards;
+}
+
+/* Glassmorphism for Detail Page */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Image Fallback Overlay */
+.image-loading-placeholder {
+  background: linear-gradient(135deg, #FAE9D1 0%, #f7e6ce 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-loading-placeholder::after {
+  content: 'Memuat Warisan Budaya...';
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #a14009;
+  opacity: 0.5;
+}

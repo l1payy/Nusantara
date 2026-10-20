@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#130801',
+            'secondary': '#a14009',
+            'tertiary': '#735c00',
+            'surface': '#FAE9D1',
+            'on-surface': '#221a0c',
+            'on-surface-variant': '#4e453f',
+            'outline-variant': '#d2c4bb',
+            'surface-container-low': '#fff2e1',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-high': '#f7e6ce',
+          },
+          fontFamily: {
+            'serif': ['Playfair Display', 'serif'],
+            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <title>Detail Budaya - NUSANTARA</title>
+</head>
+<body class="bg-[#FAE9D1] font-sans text-on-surface antialiased">
+  <!-- TOP NAVBAR -->
+  <header class="sticky top-0 z-50 w-full bg-[#FAE9D1]/90 backdrop-blur-md border-b border-primary/10">
+    <div class="max-w-[1320px] mx-auto px-6 h-20 flex items-center justify-between">
+      <a class="flex items-center gap-3 group shrink-0" href="index.html">
+        <img alt="NUSANTARA Emblem" class="w-10 h-10 object-contain rounded-full border border-primary/10 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UXfilAk3ZwLj43hJH-Ju2lpMH-8NAtjnYdHny2h05hCI93_K7CwZ4Q4PVCaPBRmnjpDIzpBm6-GOA67KVtQw6b3AlD7mIKaaTOMF3VLIjFf1DecDrlqvENDsAAfvJ87B4B8-OzyoRJTasX0uJaf_OK1GNGmsJjamX7vwRSxARX0pQFXULoGUsakfyi3PfqrRtTo15Wl36gNVx0UQWlqgsbxAEDscxT2-FCgMOYNffZC03_52nmhAytBvo">
+        <div class="flex flex-col">
+          <span class="font-serif text-xl lg:text-2xl tracking-wider text-primary font-bold">NUSANTARA</span>
+          <span class="text-[10px] tracking-widest uppercase text-on-surface-variant -mt-1 font-medium">Jejak Budaya Indonesia</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="font-serif italic text-lg text-primary/80 hover:text-secondary transition-colors" href="index.html">Home</a>
+        <a class="font-serif italic text-lg text-primary/80 hover:text-secondary transition-colors" href="index.html#peta-interaktif">Peta</a>
+        <a class="font-serif italic text-lg text-primary/80 hover:text-secondary transition-colors" href="index.html#jelajahi-budaya">Budaya</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button onclick="window.history.back()" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-primary/10 hover:bg-white transition-all shadow-sm group">
+          <span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          <span class="text-sm font-semibold">Kembali</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="detail-content" class="opacity-0 transition-opacity duration-700">
+    <!-- Breadcrumbs -->
+    <nav class="max-w-[1320px] mx-auto px-6 py-8">
+      <ol class="flex items-center gap-2 text-xs font-medium text-on-surface-variant/70">
+        <li><a href="index.html" class="hover:text-secondary">Beranda</a></li>
+        <li class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+          <span id="breadcrumb-province">Provinsi</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+          <span id="breadcrumb-category">Kategori</span>
+        </li>
+        <li class="flex items-center gap-2 text-primary font-bold">
+          <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+          <span id="breadcrumb-name">Nama Budaya</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-[1320px] mx-auto px-6 mb-16">
+      <div class="relative w-full aspect-[21/9] rounded-[2rem] overflow-hidden shadow-2xl">
+        <img id="hero-image" src="" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full p-8 md:p-12">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span id="detail-category-badge" class="px-4 py-1.5 rounded-full bg-secondary text-white text-xs font-bold tracking-wider uppercase">Kategori</span>
+            <span id="detail-status-badge" class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold tracking-wider uppercase border border-white/20">Status</span>
+          </div>
+          <h1 id="detail-title" class="font-serif text-4xl md:text-6xl lg:text-7xl text-white font-bold leading-tight mb-4">Nama Budaya</h1>
+          <div class="flex items-center gap-4 text-white/90">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[20px] text-secondary">location_on</span>
+              <span id="detail-origin" class="text-lg font-medium">Daerah Asal</span>
+            </div>
+            <button id="detail-bookmark" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+              <span class="material-symbols-outlined text-[20px] text-white">bookmark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section class="max-w-[1320px] mx-auto px-6 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Main Content -->
+      <div class="lg:col-span-8 space-y-16">
+        <!-- Mengenal Budaya -->
+        <div>
+          <h2 class="font-serif text-3xl text-primary font-bold mb-6 flex items-center gap-3">
+            <span class="w-8 h-px bg-secondary"></span>
+            Mengenal Budaya Ini
+          </h2>
+          <p id="detail-description" class="text-lg text-on-surface-variant leading-relaxed">
+            Loading description...
+          </p>
+        </div>
+
+        <!-- Sejarah & Filosofi -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-surface-container-low p-8 rounded-3xl border border-primary/5">
+            <h3 class="font-serif text-2xl text-primary font-bold mb-4">Asal-Usul & Sejarah</h3>
+            <p id="detail-history" class="text-on-surface-variant leading-relaxed">
+              Informasi sejarah belum tersedia atau perlu verifikasi lebih lanjut.
+            </p>
+          </div>
+          <div class="bg-surface-container-high p-8 rounded-3xl border border-primary/5">
+            <h3 class="font-serif text-2xl text-primary font-bold mb-4">Filosofi & Makna</h3>
+            <p id="detail-philosophy" class="text-on-surface-variant leading-relaxed">
+              Informasi filosofi belum tersedia atau perlu verifikasi lebih lanjut.
+            </p>
+          </div>
+        </div>
+
+        <!-- Peran Masyarakat -->
+        <div class="relative overflow-hidden p-8 md:p-12 rounded-[2rem] bg-primary text-surface">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-2xl font-bold mb-6">Peran dalam Kehidupan Masyarakat</h3>
+            <p id="detail-role" class="text-surface/80 text-lg leading-relaxed">
+              Budaya ini merupakan bagian integral dari identitas masyarakat setempat, sering kali menjadi inti dari perayaan adat, ritus transisi, dan simbol pemersatu komunitas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div id="gallery-container" class="hidden">
+          <h3 class="font-serif text-2xl text-primary font-bold mb-6">Galeri Warisan</h3>
+          <div id="detail-gallery" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Dynamic Gallery Images -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Info -->
+      <div class="lg:col-span-4 space-y-8">
+        <div class="sticky top-28 space-y-8">
+          <!-- Info Panel -->
+          <div class="bg-white p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/5">
+            <h4 class="font-serif text-xl text-primary font-bold mb-6">Detail Informasi</h4>
+            <div class="space-y-6">
+              <div>
+                <span class="block text-xs font-bold text-on-surface-variant/50 uppercase tracking-widest mb-1">Nama Budaya</span>
+                <span id="side-name" class="text-lg font-bold text-primary">...</span>
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-on-surface-variant/50 uppercase tracking-widest mb-1">Daerah Asal</span>
+                <span id="side-origin" class="text-lg font-bold text-primary">...</span>
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-on-surface-variant/50 uppercase tracking-widest mb-1">Kategori Budaya</span>
+                <span id="side-category" class="text-lg font-bold text-secondary">...</span>
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-on-surface-variant/50 uppercase tracking-widest mb-1">Status Verifikasi</span>
+                <div class="flex items-center gap-2 mt-1">
+                  <span id="side-verification-icon" class="material-symbols-outlined text-[18px]">pending</span>
+                  <span id="side-verification-text" class="text-sm font-semibold">Menunggu Verifikasi</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-primary/5">
+              <p class="text-xs text-on-surface-variant/60 italic leading-relaxed">
+                Data dikurasi dari pangkalan data Warisan Budaya Takbenda (WBTB) dan sumber riset antropologi Nusantara.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fun Fact -->
+          <div class="bg-secondary text-white p-8 rounded-3xl relative overflow-hidden group">
+            <span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10 group-hover:scale-110 transition-transform duration-700">lightbulb</span>
+            <h4 class="font-serif text-xl font-bold mb-4 relative z-10">Tahukah Kamu?</h4>
+            <p id="detail-fun-fact" class="text-white/90 text-sm leading-relaxed relative z-10">
+              Setiap elemen dalam budaya ini menyimpan cerita unik yang telah diwariskan secara turun-temurun selama berabad-abad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Section -->
+    <section class="bg-surface-container-low py-24">
+      <div class="max-w-[1320px] mx-auto px-6">
+        <div class="flex items-end justify-between mb-12">
+          <div>
+            <h2 class="font-serif text-3xl md:text-4xl text-primary font-bold mb-2">Jelajahi Budaya Lain</h2>
+            <p class="text-on-surface-variant">Rekomendasi warisan budaya serupa di wilayah ini.</p>
+          </div>
+          <a href="index.html#jelajahi-budaya" class="hidden sm:flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors group">
+            <span>Lihat Semua</span>
+            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+        <div id="related-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Related culture cards will be injected here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-primary text-surface/80 pt-24 pb-12">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-secondary"></div>
+            <span class="font-serif text-2xl text-white tracking-tight font-bold">NUSANTARA</span>
+          </div>
+          <p class="font-serif italic text-xl text-white/60">Jelajahi Indonesia, kenali cerita di balik budayanya.</p>
+          <p class="text-sm max-w-md leading-relaxed text-white/50">Platform kurasi ekspedisi kebudayaan digital yang mengarsipkan warisan takbenda, arsitektur vernakular, ritual adat, dan gastronomi luhur.</p>
+        </div>
+        <div class="lg:col-span-6 flex flex-col items-end justify-between">
+          <nav class="flex gap-8">
+            <a href="index.html" class="hover:text-white transition-colors">Beranda</a>
+            <a href="index.html#peta-interaktif" class="hover:text-white transition-colors">Peta</a>
+            <a href="index.html#jelajahi-budaya" class="hover:text-white transition-colors">Arsip</a>
+          </nav>
+          <p class="text-xs text-white/30 mt-8">© 2025 NUSANTARA — Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="detail.js"></script>
+</body>
+</html>
